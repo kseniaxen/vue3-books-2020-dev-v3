@@ -19,6 +19,11 @@ el-menu(:default-active="state.activeIndex" class="el-menu-demo" mode="horizonta
         :class="{ 'active-lang': i18n.getLocale() === 'ru' }"
       )
         flag(:iso="'ru'")
+      span.lang-icon(
+        @click="setLocale('ua')"
+        :class="{ 'active-lang': i18n.getLocale() === 'ua' }"
+      )
+        flag(:iso="'ua'")
     // меню учетной записи, если пользователь аутентифицирован
     el-menu-item(v-if="checkUser")
         el-dropdown
